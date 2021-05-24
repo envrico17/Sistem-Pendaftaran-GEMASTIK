@@ -147,14 +147,16 @@ public class Login extends javax.swing.JFrame {
         FileManager manager = new FileManager();
         Tim tim = new Tim();
         String[] tiga = manager.getData(dua,satu);
-        tim.setData(tiga[1],tiga[12],tiga[0],tiga[2],tiga[13]); 
-        tim.setData(tiga[3],tiga[4],new File(tiga[5]));
-        tim.setAnggota1(tiga[6],tiga[7],new File(tiga[8]));
-        tim.setAnggota2(tiga[9],tiga[10],new File(tiga[11]));
+        
+        System.out.println(tiga.length);
         if (tiga.length==0) {
             jLabel2.setVisible(true);
         }else {
             jLabel2.setVisible(false);
+        tim.setData(tiga[1],tiga[12],tiga[0],tiga[2],tiga[13]); 
+        tim.setData(tiga[3],tiga[4],new File(tiga[5]));
+        tim.setAnggota1(tiga[6],tiga[7],new File(tiga[8]));
+        tim.setAnggota2(tiga[9],tiga[10],new File(tiga[11]));
             new Dashboard(tim).setVisible(true);
 dispose();
         }

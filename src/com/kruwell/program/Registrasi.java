@@ -87,6 +87,11 @@ public class Registrasi extends javax.swing.JFrame {
         jLabel8.setText("Divisi :");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Programming", "Game Development", "Cyber Security" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel9.setForeground(new java.awt.Color(255, 0, 0));
         jLabel9.setText("Password tidak cocok");
@@ -201,12 +206,19 @@ public class Registrasi extends javax.swing.JFrame {
             tim.setData(nk,nimk,new File(kk));
             tim.setAnggota1(n1,nim1,new File(ka1));
             tim.setAnggota2(n2,nim2,new File(ka2));
+            FileManager manager = new FileManager();
+            manager.Data(u, v, d, nk, nimk, kk, n1, nim1, ka1, n2, nim2, ka2, p, e);
             new Dashboard(tim).setVisible(true);
 dispose();
         } else{
             jLabel9.setVisible(true);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments

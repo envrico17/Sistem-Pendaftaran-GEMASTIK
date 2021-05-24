@@ -12,7 +12,7 @@ import java.util.*;
  */
 public class FileManager {
     FileWriter akun;
-    String pathToCsv = "D:\\Kuliah Semester 2\\PBO\\Tugas Besar PBO\\Sistem-Pendaftaran-GEMASTIK\\SistemPendaftaranGEMASTIK\\src\\com\\kruwell\\program";
+    String pathToCsv = "C:\\Users\\LENOVO\\Documents\\NetBeansProjects\\SistemPendaftaranGEMASTIK\\Sistem-Pendaftaran-GEMASTIK\\src\\com\\kruwell\\program";
     public static void main (String args[]) {
         FileManager manager = new FileManager();
         manager.CreateFile();
